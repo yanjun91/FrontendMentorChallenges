@@ -1,0 +1,64 @@
+body{
+	background-image: url("../images/pattern-background-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: #e0e8ff;
+	height: 20em;
+	font-size: 16px;
+	font-family: 'Red Hat Display', sans-serif;
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+.container {
+	width: 30%;
+	margin: 100px auto;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.container .header-img {
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+}
+
+.card-body {
+	width: 80%;
+	margin: auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.light {
+	color: #a8a8a8;
+}
+
+.plan-div {
+	background-color: #f5f7ff;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.col {
+    float: left;
+    border: 1px solid red;
+}
+
+.plan {
+    padding: 10px;
+}
+
+.change-link {
+    padding: 20px;
+}
+
+hr {
+	display: block; 
+	clear: left; 
+	margin: -0.66em 0;
+  	visibility: hidden;
+}
