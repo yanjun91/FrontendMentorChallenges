@@ -10,8 +10,14 @@ body{
 	text-align: center;
 }
 
+
 h1 {
 	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 700;
 }
 
 .container {
@@ -45,20 +51,90 @@ h1 {
 
 .col {
     float: left;
-    border: 1px solid red;
-}
-
-.plan {
-    padding: 10px;
+    margin: 10px;
 }
 
 .change-link {
-    padding: 20px;
+    float: right;
+    margin-top: 1em;
 }
 
-hr {
-	display: block; 
-	clear: left; 
-	margin: -0.66em 0;
-  	visibility: hidden;
+.change-link a {
+	color: #3829e0;
+}
+
+.change-link a:hover {
+	opacity: 0.5;
+}
+
+.button {
+	margin: 30px;
+	background-color: #3829e0;
+	border-radius: 10px;
+	padding: 15px;
+	color: #fff;
+	box-shadow: 0px 20px 10px 2px #e0e8ff;
+}
+
+.button:hover {
+	opacity: 0.5;
+}
+
+.cancel {
+	font-weight: 900;
+	color: #000;
+	opacity: 0.5;
+}
+
+.cancel:hover {
+	opacity: 1;
+}
+
+
+@media only screen and (max-width: 1178px) {
+	.container {
+		width: 40%;
+		margin: 50px auto;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		width: 60%;
+		margin: 50px auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		width: 80%;
+		margin: 50px auto;
+	}
+
+	.col {
+		margin: 5px;
+	}
+
+	.change-link {
+	    margin-top: 1em;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	body {
+		background-image: url("../images/pattern-background-mobile.svg");
+	}
+
+	.container {
+		width: 90%;
+	}
+
+	.col {
+		margin: 5px;
+	}
+
+	.change-link {
+	    margin-top: 1em;
+	}
+
 }
