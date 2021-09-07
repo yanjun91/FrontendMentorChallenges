@@ -225,6 +225,18 @@ input[type=number] {
 	padding: 5px;
 	border: 0;
 	margin-top: 6em;
+
+}
+
+#reset:disabled {
+	cursor: not-allowed;
+	pointer-events: all !important;
+	opacity: 0.2;
+}
+
+#reset:hover:enabled {
+	background-color: #c5e4e7;
+	color: #00494d;
 }
 
 /*

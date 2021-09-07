@@ -68,6 +68,7 @@ function calculate(){
 }
 
 function reset(){
+	console.log("reset");
 	// Output elements
 	var tipElem = document.getElementById("tip-amount");
 	var totalElem = document.getElementById("total-amount");
@@ -80,11 +81,24 @@ function reset(){
 
 	billElem.value = "";
 	if(tipSelectionElem != undefined) {
-		tipSelectionElem.remove("selected");
+		tipSelectionElem.classList.remove("selected");
 	}
 	tipInputElem.value = "";
 	numOfPeopleElem.value = "";
 
 	tipElem.innerHTML = "$0.00";
 	totalElem.innerHTML = "$0.00";
+	toggleBtn();
+}
+
+function toggleBtn(){
+	// Reset button
+    var resetBtn = document.getElementById("reset");
+    var tipSelectionElem = document.getElementById("tips-buttons").getElementsByClassName("selected")[0];
+	if(tipSelectionElem == undefined && document.getElementById("bill-input").value == "" && document.getElementById("custom-tips-input").value == "" && document.getElementById("number-of-people").value == ""){
+		resetBtn.disabled = true;
+	}
+	else {
+		resetBtn.disabled = false;
+	}
 }
