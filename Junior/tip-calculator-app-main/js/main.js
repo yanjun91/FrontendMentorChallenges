@@ -62,8 +62,8 @@ function calculate(){
 		totalElem.innerHTML = "$" + Math.round(totalPerPerson).toFixed(2);
 	}
 	else {
-		tipElem.innerHTML = "-";
-		totalElem.innerHTML = "-";
+		tipElem.innerHTML = "$0.00";
+		totalElem.innerHTML = "$0.00";
 	}
 }
 
@@ -85,6 +85,6 @@ function reset(){
 	tipInputElem.value = "";
 	numOfPeopleElem.value = "";
 
-	tipElem.innerHTML = "-";
-	totalElem.innerHTML = "-";
+	tipElem.innerHTML = "$0.00";
+	totalElem.innerHTML = "$0.00";
 }
