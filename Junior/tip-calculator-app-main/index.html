@@ -37,11 +37,11 @@
         <div class="section" id="tips-container">
           <div class="label">Select Tip %</div>
           <div class="tips-selection" id="tips-buttons">
-            <button class="tips-toggle selections selected" type="button" value="5" onclick="selectTipToggle(this)">5%</button>
-            <button class="tips-toggle selections" type="button" value="10" onclick="selectTipToggle(this)">10%</button>
-            <button class="tips-toggle selections" type="button" value="15" onclick="selectTipToggle(this)">15%</button>
-            <button class="tips-toggle selections" type="button" value="25" onclick="selectTipToggle(this)">25%</button>
-            <button class="tips-toggle selections" type="button" value="50" onclick="selectTipToggle(this)">50%</button>
+            <button class="tips-toggle selections" type="button" value="5" onclick="selectTipToggle(this);toggleBtn()">5%</button>
+            <button class="tips-toggle selections" type="button" value="10" onclick="selectTipToggle(this);toggleBtn()">10%</button>
+            <button class="tips-toggle selections" type="button" value="15" onclick="selectTipToggle(this);toggleBtn()">15%</button>
+            <button class="tips-toggle selections" type="button" value="25" onclick="selectTipToggle(this);toggleBtn()">25%</button>
+            <button class="tips-toggle selections" type="button" value="50" onclick="selectTipToggle(this);toggleBtn()">50%</button>
             <input class="tips-toggle input" id="custom-tips-input" type="number" placeholder="Custom" onclick="selectTipToggle(this)"  onkeyup="calculate()">
             <div style="clear: both;"></div>
           </div>
@@ -75,7 +75,7 @@
           </div>
         </div>
         <div class="section">
-          <input type="button" id="reset" value="RESET" onclick="reset()">
+          <button type="button" id="reset" value="RESET" onclick="reset()" disabled>RESET</button>
         </div>
       </div>
       <div style="clear: both;"></div>
@@ -85,5 +85,20 @@
       Coded by <a href="https://github.com/yanjun91">Lim Yan Jun</a>.
     </div>
   </div>
+  <script>
+    window.onload = function() {
+      // Reset button
+      var resetBtn = document.getElementById("reset");
+
+      var inputElem = document.querySelectorAll("#bill-input, #custom-tips-input, #number-of-people");
+
+      for(var i=0; i < inputElem.length; i++){
+        inputElem[i].addEventListener("keyup", function() {
+          toggleBtn();
+        })
+      }
+
+    }
+  </script>
 </body>
 </html>
